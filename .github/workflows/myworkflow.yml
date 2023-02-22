@@ -5,11 +5,11 @@ name: myworkflow
 
 # 触发条件
 on:
-  # push:
-  #  branches:
-  #   - master
-  schedule:
-     - cron: 56 20 * * *
+   push:
+    branches:
+     - master
+  # schedule:
+  #   - cron: 56 20 * * *
   # release:
   #   types: [published]
   # watch:
