@@ -57,7 +57,7 @@ jobs:
           sudo -E apt-get update
           sudo -E apt-get install git nano screen patch fakeroot build-essential devscripts libncurses5 libncurses5-dev libssl-dev bc 
           sudo -E apt-get install flex bison libelf-dev libaudit-dev libgtk2.0-dev libperl-dev asciidoc xmlto gnupg gnupg2 rsync lintian debhelper 
-          #sudo -E apt-get install libdw-dev libnuma-dev libslang2-dev sphinx-common asciidoc-base automake cpio dh-python file gcc kmod libiberty-dev 
+          sudo -E apt-get install libdw-dev libnuma-dev libslang2-dev sphinx-common asciidoc-base automake cpio dh-python file gcc kmod libiberty-dev 
           #sudo -E apt-get install libtool perl-modules python2-minimal sed tar zlib1g-dev liblz4-tool idn
           #sudo -E apt-get install perlapi libpve-rs-perl libproxmox-rs-perl libpve-common-perl dwarves zstd
           #sudo -E apt-get install -t buster-backports dwarves
@@ -86,9 +86,9 @@ jobs:
           ls pve-kernel
           cd pve-kernel
           ls patches/kernel/
-          sed -i "s/106 @@/105 @@/g" patches/kernel/0003-pci-Enable-overrides-for-missing-ACS-capabilities-4..patch
-          sed -i "/pci_find_ext_capability(dev, PCI_EXT_CAP_ID_ACS))/d" patches/kernel/0003-pci-Enable-overrides-for-missing-ACS-capabilities-4..patch
-          sed -i "s/(dev) ||/(dev))/g" patches/kernel/0003-pci-Enable-overrides-for-missing-ACS-capabilities-4..patch
+          sed -i "s/106 @@/105 @@/g" patches/kernel/0004-pci-Enable-overrides-for-missing-ACS-capabilities-4..patch
+          sed -i "/pci_find_ext_capability(dev, PCI_EXT_CAP_ID_ACS))/d" patches/kernel/0004-pci-Enable-overrides-for-missing-ACS-capabilities-4..patch
+          sed -i "s/(dev) ||/(dev))/g" patches/kernel/0004-pci-Enable-overrides-for-missing-ACS-capabilities-4..patch
       
       # 修正 BTF
       - name: Fix DEBUG_INFO_BTF
