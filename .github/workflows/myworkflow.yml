@@ -1,7 +1,7 @@
 # This is free software, lisence use MIT.
 # Copyright (C) https://github.com/yfdoor
 
-name: PVE-Kernel-CI
+name: myworkflow
 
 # 触发条件
 on:
@@ -9,7 +9,7 @@ on:
   #  branches:
   #   - master
   schedule:
-     - cron: 0 0 * * 4
+     - cron: 56 20 * * *
   # release:
   #   types: [published]
   # watch:
